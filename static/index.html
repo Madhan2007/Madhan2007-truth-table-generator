@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Table Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-bolt"></i> Truth Table Generator</h1>
+            <p>A beautiful, modern way to evaluate logical propositions instantly.</p>
+        </header>
+
+        <main>
+            <section class="glass-card form-section">
+                <form id="ttgForm">
+                    <div class="form-group">
+                        <label for="variables">Variables (comma separated)</label>
+                        <input type="text" id="variables" placeholder="e.g. p, q, r" value="p, q" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="propositions">Propositions (comma separated)</label>
+                        <input type="text" id="propositions" placeholder="e.g. p and q, p or q" value="p and q, p or q">
+                        <small>Operators: and, or, not (~), => (implies), = (biconditional), xor</small>
+                    </div>
+
+                    <div class="options-row">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="ints" checked>
+                            <label for="ints">Use Numbers (1/0) instead of True/False</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="ascending">
+                            <label for="ascending">Ascending Order</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="generateBtn">
+                        <span class="btn-text" style="display: block;">Generate Table</span>
+                        <div class="spinner disable" style="display: none;"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+                    </button>
+                </form>
+                <div id="error-message" class="error-msg hide"></div>
+            </section>
+
+            <section class="result-section hide" id="resultSection">
+                <div class="glass-card table-container">
+                    <div class="table-header">
+                        <h2>Results</h2>
+                        <button id="copyBtn" class="btn-icon" title="Copy as CSV"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                    <div class="table-scroll">
+                        <table id="truthTable">
+                            <thead>
+                                <tr id="tableHeadRow"></tr>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

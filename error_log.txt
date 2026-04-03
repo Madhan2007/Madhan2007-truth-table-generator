@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "C:\Users\DELL\Downloads\truth-table-generator-master\truth-table-generator-master\diag.py", line 5, in <module>
+    import fastapi
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\__init__.py", line 7, in <module>
+    from .applications import FastAPI as FastAPI
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 13, in <module>
+    from fastapi import routing
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 25, in <module>
+    from fastapi import params, temp_pydantic_v1_params
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\params.py", line 7, in <module>
+    from fastapi.openapi.models import Example
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\openapi\models.py", line 5, in <module>
+    from fastapi._compat import (
+    ...<6 lines>...
+    )
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\_compat\__init__.py", line 1, in <module>
+    from .main import BaseConfig as BaseConfig
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\_compat\main.py", line 8, in <module>
+    from fastapi._compat import may_v1
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\_compat\may_v1.py", line 60, in <module>
+    from .v2 import ValidationError, create_model
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\_compat\v2.py", line 17, in <module>
+    from pydantic import BaseModel, ConfigDict, Field, TypeAdapter, create_model
+ImportError: cannot import name 'TypeAdapter' from 'pydantic' (C:\Users\DELL\AppData\Local\Programs\Python\Python314\Lib\site-packages\pydantic\__init__.cp314-win_amd64.pyd)

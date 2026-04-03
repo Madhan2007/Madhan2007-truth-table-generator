@@ -1,0 +1,2 @@
+[console_scripts]
+ttg_cli.py = ttg.ttg_cli:clielement
